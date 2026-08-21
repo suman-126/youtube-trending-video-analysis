@@ -56,29 +56,29 @@ YouTube-Trending-Video-Analysis/
 └── .gitignore
 
 📄 What Each File Does
-stream.py: This is the main Streamlit application. It contains the code for:
+* stream.py: This is the main Streamlit application. It contains the code for:
 
-Loading the dataset
-Preparing the data
-Creating filters
-Calculating metrics
-Creating tables
-Creating charts
-Creating the Word Cloud
-Creating the Upload Time Heatmap
-Providing the dataset download option
-Displaying the dashboard
+- Loading the dataset
+- Preparing the data
+- Creating filters
+- Calculating metrics
+- Creating tables
+- Creating charts
+- Creating the Word Cloud
+- Creating the Upload Time Heatmap
+- Providing the dataset download option
+- Displaying the dashboard
 
-CAvideos.csv: This is the main YouTube trending video dataset used for the analysis.
+* CAvideos.csv: This is the main YouTube trending video dataset used for the analysis.
 The dataset is large, so it may be kept locally instead of being uploaded to GitHub.
 
-CA_category_id.json: This JSON file contains YouTube video category information and category IDs.
+* CA_category_id.json: This JSON file contains YouTube video category information and category IDs.
 
-requirements.txt: This file contains the Python libraries required to run the project.
+* requirements.txt: This file contains the Python libraries required to run the project.
 
-README.md: This file provides information about the project, its purpose, features, technologies, and instructions for running it.
+* README.md: This file provides information about the project, its purpose, features, technologies, and instructions for running it.
 
-.gitignore: This file tells Git which files or folders should not be uploaded to the repository, such as the large dataset and Python environment files.
+* .gitignore: This file tells Git which files or folders should not be uploaded to the repository, such as the large dataset and Python environment files.
 
 
 📊 Dashboard Features
@@ -123,17 +123,17 @@ This helps compare the number of likes with the number of views.
 
 📊 Charts and Visualizations
 The project includes several visualizations:
-Views vs Likes Scatter Plot:
+- Views vs Likes Scatter Plot:
 Shows the relationship between views and likes.
 
-Videos by Category:
+- Videos by Category:
 A bar chart shows how many videos are available in each category.
 
-Trending Video Tags Word Cloud:
+- Trending Video Tags Word Cloud:
 A Word Cloud shows frequently appearing tags from trending videos.
 The Word Cloud changes according to the selected category.
 
-Upload Time Heatmap:
+- Upload Time Heatmap:
 The heatmap shows the number of videos uploaded according to:
 Day of the week
 Hour of the day
@@ -143,13 +143,13 @@ The heatmap uses the filtered data, so it changes when the category or date rang
 📌 Key Metrics
 The dashboard displays four important metrics:
 
-Total Videos:Shows the total number of videos available after applying the selected filters.
+- Total Videos:Shows the total number of videos available after applying the selected filters.
 
-Total Views:Shows the total number of views for the filtered videos.
+- Total Views:Shows the total number of views for the filtered videos.
 
-Total Likes:Shows the total number of likes for the filtered videos.
+- Total Likes:Shows the total number of likes for the filtered videos.
 
-Average Views:Shows the average number of views per video.
+- Average Views:Shows the average number of views per video.
 These metrics update dynamically when the user changes the filters.
 
 
@@ -162,23 +162,23 @@ This makes it easier to save and use the analyzed data for further work.
 Before creating the dashboard, the dataset was explored and prepared for analysis.
 The data preparation process included:
 
-Checking the dataset structure.
-Checking the number of rows and columns.
-Checking missing values.
-Checking duplicate records.
-Removing duplicate records where required.
-Converting publish_time into datetime format.
-Extracting the publishing day.
-Extracting the publishing hour.
-Ordering the days from Monday to Sunday.
-Working with category IDs and category information.
+- Checking the dataset structure.
+- Checking the number of rows and columns.
+- Checking missing values.
+- Checking duplicate records.
+- Removing duplicate records where required.
+- Converting publish_time into datetime format.
+- Extracting the publishing day.
+- Extracting the publishing hour.
+- Ordering the days from Monday to Sunday.
+- Working with category IDs and category information.
 
-Additional analytical columns were created for better analysis:
+* Additional analytical columns were created for better analysis:
 
-engagement_rate
-like_rate
-publish_day
-publish_hour
+- engagement_rate
+- like_rate
+- publish_day
+- publish_hour
 
 
 ▶️ How to Run the Project
@@ -204,21 +204,21 @@ The Streamlit dashboard will open in your web browser.
 📚 What I Learned
 While working on this project, I learned how to:
 
-Work with a real-world dataset.
-Use Pandas for data cleaning and analysis.
-Handle missing and duplicate data.
-Convert and work with datetime data.
-Create new analytical features.
-Calculate engagement and like rates.
-Use Matplotlib and Seaborn for visualization.
-Create a Word Cloud from text data.
-Build interactive dashboards using Streamlit.
-Add filters to a dashboard.
-Display metrics and interactive tables.
-Work with JSON category data.
-Create a requirements file for a Python project.
-Write project documentation using README.
-Organize a data analysis project.
+- Work with a real-world dataset.
+- Use Pandas for data cleaning and analysis.
+- Handle missing and duplicate data.
+- Convert and work with datetime data.
+- Create new analytical features.
+- Calculate engagement and like rates.
+- Use Matplotlib and Seaborn for visualization.
+- Create a Word Cloud from text data.
+- Build interactive dashboards using Streamlit.
+- Add filters to a dashboard.
+- Display metrics and interactive tables.
+- Work with JSON category data.
+- Create a requirements file for a Python project.
+- Write project documentation using README.
+- Organize a data analysis project.
 
 🎯 Project Goal
 The main goal of this project is to turn raw YouTube trending video data into meaningful information through data analysis and interactive visualization.
@@ -227,12 +227,12 @@ The Streamlit dashboard makes it possible to explore video performance and disco
 🚀 Future Improvements
 Some possible improvements for the project include:
 
-Adding more advanced filters.
-Adding more category-based comparisons.
-Adding monthly and yearly trend analysis.
-Adding additional interactive visualizations.
-Connecting the project to live YouTube data using the YouTube API.
-Deploying the Streamlit dashboard online.
+- Adding more advanced filters.
+- Adding more category-based comparisons.
+- Adding monthly and yearly trend analysis.
+- Adding additional interactive visualizations.
+- Connecting the project to live YouTube data using the YouTube API.
+- Deploying the Streamlit dashboard online.
 
 👩‍💻 Author
 Suman
