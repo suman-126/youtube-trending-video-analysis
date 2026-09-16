@@ -159,4 +159,4 @@ st.pyplot(plt)
 
 #To add Footer
 st.divider()
-st.markdown("<p style='text-align:center;'>Youtube Trending Video Analysis | Built With Python, Pandas and Streamlit</p>",unsafe_allow_html=True)
+st.markdown("<p style='text-align:center;'><b>Youtube Trending Video Analysis | Built With Python, Pandas and Streamlit</b></p>",unsafe_allow_html=True)
