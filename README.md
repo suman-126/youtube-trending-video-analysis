@@ -1,241 +1,340 @@
-YouTube Trending Video Analysis
+# YouTube Trending Video Analysis
 
-📌 Project Overview
+## 📌 Project Overview
 
-The **YouTube Trending Video Analysis** project is a data analysis and visualization project built using Python. The purpose of this project is to explore YouTube trending videos and understand what makes videos perform well in terms of views, likes, comments, engagement, and other factors.
+The **YouTube Trending Video Analysis** project is a Data Science project built using Python. The purpose of this project is to explore YouTube trending videos and understand their performance in terms of views, likes, comments, engagement, categories, tags, and upload patterns.
 
-An interactive **Streamlit dashboard** was created to make the analysis easier to understand and explore. Users can select different categories and date ranges and view the results through metrics, tables, and visualizations.
+The project includes a **Jupyter Notebook** for data analysis and an interactive **Streamlit dashboard** for exploring the results.
 
-🎯 Main Objectives of the Project
+Users can select different categories and date ranges in the dashboard and analyze the data through metrics, tables, charts, a Word Cloud, and an Upload Time Heatmap.
+---
+
+## 🎯 Main Objectives
 The main objectives of this project are:
 
-- Analyze YouTube trending video data.
-- Clean and prepare the dataset for analysis.
-- Understand video performance using views, likes, and comments.
-- Calculate engagement rate and like rate.
-- Analyze the distribution of videos across categories.
-- Identify top-performing and highly engaging videos.
-- Explore frequently used video tags.
-- Analyze video upload patterns by day and hour.
-- Build an interactive dashboard using Streamlit.
-- Present the analysis in a simple and user-friendly way.
+* Analyze YouTube trending video data.
+* Clean and prepare the dataset for analysis.
+* Understand video performance using views, likes, and comments.
+* Calculate engagement rate and like rate.
+* Analyze the distribution of trending videos across categories.
+* Identify top-performing and highly engaging videos.
+* Analyze frequently used video tags.
+* Explore video upload patterns by day and hour.
+* Analyze relationships between different video metrics.
+* Analyze trending videos over time.
+* Compare monthly average video performance.
+* Build an interactive dashboard using Streamlit.
+* Present the analysis in a simple and user-friendly way.
+---
 
-🔎 What This Project Does
-This project takes a YouTube trending video dataset and performs data cleaning, preparation, analysis, and visualization.
-The project creates additional features such as:
+## 🔎 What This Project Does
+The project takes a YouTube trending video dataset and performs data cleaning, preprocessing, exploratory data analysis, feature creation, and visualization.
 
-- **Engagement Rate**
-- **Like Rate**
-- **Publish Day**
-- **Publish Hour**
+Additional analytical features are created, including:
+* **Engagement Rate**
+* **Like Rate**
+* **Publish Day**
+* **Publish Hour**
 
-The processed data is then used to create an interactive Streamlit dashboard.
-Users can select a category and date range and explore how the data changes through different metrics, tables, charts, a Word Cloud, and an Upload Time Heatmap.
+The project then uses the processed data to create visualizations and an interactive Streamlit dashboard.
+---
 
+## 🛠️ Technologies Used
 
-🛠️ Technologies Used
-The project was developed using the following technologies and libraries:
+* **Python** — Programming and data analysis
+* **Pandas** — Data cleaning and data manipulation
+* **Matplotlib** — Data visualization
+* **Seaborn** — Statistical visualization and heatmaps
+* **WordCloud** — Visualization of trending video tags
+* **Streamlit** — Interactive dashboard
+* **JSON** — YouTube category information
+* **Jupyter Notebook** — Data analysis and exploration
+---
 
-- **Python** — Programming and data analysis
-- **Pandas** — Data cleaning and data manipulation
-- **Matplotlib** — Data visualization
-- **Seaborn** — Heatmap and visualization
-- **WordCloud** — Visualization of trending video tags
-- **Streamlit** — Interactive dashboard
-- **JSON** — YouTube category information
+## 📁 Project Structure
 
-📁 Project Structure
 ```text
 YouTube-Trending-Video-Analysis/
 │
 ├── stream.py
+├── yt_analysis.ipynb
 ├── CAvideos.csv
 ├── CA_category_id.json
 ├── requirements.txt
 ├── README.md
 └── .gitignore
+```
 
-📄 What Each File Does
-* stream.py: This is the main Streamlit application. It contains the code for:
+### 📄 File Description
 
-- Loading the dataset
-- Preparing the data
-- Creating filters
-- Calculating metrics
-- Creating tables
-- Creating charts
-- Creating the Word Cloud
-- Creating the Upload Time Heatmap
-- Providing the dataset download option
-- Displaying the dashboard
+**`stream.py`**
+The main Streamlit application. It contains the dashboard, filters, metrics, tables, charts, Word Cloud, Upload Time Heatmap, and dataset download functionality.
 
-* CAvideos.csv: This is the main YouTube trending video dataset used for the analysis.
-The dataset is large, so it may be kept locally instead of being uploaded to GitHub.
+**`yt_analysis.ipynb`**
+The Jupyter Notebook containing the Data Science analysis, including data cleaning, preprocessing, exploratory analysis, feature engineering, statistical analysis, and visualizations.
 
-* CA_category_id.json: This JSON file contains YouTube video category information and category IDs.
+**`CAvideos.csv`**
+The YouTube trending video dataset used for the analysis.
 
-* requirements.txt: This file contains the Python libraries required to run the project.
+The dataset is large, so it may be kept locally and excluded from the GitHub repository using `.gitignore`.
 
-* README.md: This file provides information about the project, its purpose, features, technologies, and instructions for running it.
+**`CA_category_id.json`**
+Contains YouTube category IDs and their corresponding category names.
 
-* .gitignore: This file tells Git which files or folders should not be uploaded to the repository, such as the large dataset and Python environment files.
+**`requirements.txt`**
+Contains the Python libraries required to run the project.
 
+**`README.md`**
+Project documentation containing information about the project, technologies, features, and setup instructions.
 
-📊 Dashboard Features
-The Streamlit dashboard contains several sections that allow users to interact with and understand the YouTube trending data.
+**`.gitignore`**
+Specifies files and folders that should not be uploaded to GitHub, such as large datasets and Python virtual environments.
+---
 
-🔎 1. Category Filter
-A category dropdown is available in the sidebar.
-Users can select a category and the dashboard updates the relevant data according to the selected category.
+# 📊 Data Science Analysis
+The Jupyter Notebook contains the following analysis:
 
-📅 2. Date Filter
-A date range filter allows users to select a specific time period for analysis.
-The dashboard updates according to the selected dates.
+### 🧹 1. Data Cleaning and Preparation
 
-⭐ Main Features
+* Dataset inspection
+* Shape and column analysis
+* Missing-value checking
+* Duplicate checking and removal
+* Datetime conversion
+* Category mapping
+* Publish day extraction
+* Publish hour extraction
 
-📈 3. Views vs Likes
-A scatter plot is used to explore the relationship between:
-Views
-Likes
-This helps understand whether videos with more views also tend to receive more likes.
+### 📈 2. Descriptive Statistics
+Basic statistical analysis is performed on:
 
-🏆 4. Top Videos by Views
-The dashboard displays the top videos based on the number of views.
-The table includes:
-Video title
-Views
-Likes
-Comment count
+* Views
+* Likes
+* Dislikes
+* Comments
+* Like Rate
+* Engagement Rate
 
-🔥 5. Top Engaging Videos
-Videos are sorted according to their calculated engagement rate.
-This helps identify videos that receive a high level of interaction compared with their number of views.
-Engagement Rate
+### 🏆 3. Top Trending Videos
+The notebook identifies videos with high numbers of:
+
+* Views
+* Likes
+* Comments
+* Engagement Rate
+* Like Rate
+
+### 🏷️ 4. Category Analysis
+The number of trending videos in different YouTube categories is analyzed and visualized.
+
+### 📺 5. Channel Analysis
+The notebook identifies channels with a high number of trending videos.
+
+### 👍 6. Views vs Likes Analysis
+A scatter plot is used to explore the relationship between video views and likes.
+
+### 📊 7. Engagement Rate
+The engagement rate is calculated using:
+
+```text
 Engagement Rate = ((Likes + Comments) / Views) × 100
+```
 
-👍 6. Top Videos by Like Rate
-The dashboard displays videos with the highest like rate.
-Like Rate
+### ❤️ 8. Like Rate
+The like rate is calculated using:
+
+```text
 Like Rate = (Likes / Views) × 100
-This helps compare the number of likes with the number of views.
+```
 
+### 🔗 9. Correlation Analysis
+A correlation matrix is used to examine relationships between:
 
-📊 Charts and Visualizations
-The project includes several visualizations:
-- Views vs Likes Scatter Plot:
-Shows the relationship between views and likes.
+* Views
+* Likes
+* Comments
+* Engagement Rate
+* Like Rate
 
-- Videos by Category:
-A bar chart shows how many videos are available in each category.
+### 📈 10. Time-Series Analysis
+The project analyzes how the number of trending videos changes over time.
 
-- Trending Video Tags Word Cloud:
-A Word Cloud shows frequently appearing tags from trending videos.
-The Word Cloud changes according to the selected category.
+### 📅 11. Monthly Performance Analysis
+Monthly average views and likes are analyzed to understand changes in video performance over time.
 
-- Upload Time Heatmap:
-The heatmap shows the number of videos uploaded according to:
-Day of the week
-Hour of the day
-The days are arranged from Monday to Sunday.
-The heatmap uses the filtered data, so it changes when the category or date range is changed.
+### ⏰ 12. Upload-Time Analysis
+Video publishing patterns are analyzed using:
 
-📌 Key Metrics
+* Day of the week
+* Hour of the day
+
+### ☁️ 13. Trending Video Tags
+A Word Cloud is created to visualize frequently appearing video tags.
+---
+
+# 🖥️ Streamlit Dashboard
+The project includes an interactive Streamlit dashboard with six main sections.
+
+### 📊 Overview
+Contains:
+
+* Total Videos
+* Total Views
+* Total Likes
+* Average Views
+* Views vs Likes scatter plot
+
+### 📈 Performance Analysis
+Contains:
+
+* Correlation Analysis
+* Trending Videos Over Time
+* Monthly Average Performance
+
+### 🏷️ Category Analysis
+Contains:
+
+* Videos by Category
+* Category Performance
+* Key Data Science Insights
+
+### 🔥 Trending Videos
+Contains:
+
+* Top Videos by Views
+* Top Engaging Videos
+* Top Videos by Like Rate
+
+### ⏰ Upload Time
+Contains:
+
+* Upload Time Heatmap
+* Upload Time Insights
+
+### 📋 Data
+Contains:
+
+* Filtered Dataset Download
+* Trending Video Tags Word Cloud
+---
+
+# 🔎 Interactive Filters
+The dashboard provides sidebar filters for:
+
+### Category
+Users can select a specific YouTube category.
+
+### Date Range
+Users can select a start date and end date.
+
+The dashboard updates the displayed data and visualizations according to the selected filters.
+---
+
+# 📌 Key Metrics
 The dashboard displays four important metrics:
 
-- Total Videos:Shows the total number of videos available after applying the selected filters.
+* **Total Videos** — Number of videos after applying the selected filters.
+* **Total Views** — Total views of the filtered videos.
+* **Total Likes** — Total likes of the filtered videos.
+* **Average Views** — Average views per video.
+---
 
-- Total Views:Shows the total number of views for the filtered videos.
+# 📥 Download Filtered Data
+The dashboard provides a CSV download option.
 
-- Total Likes:Shows the total number of likes for the filtered videos.
-
-- Average Views:Shows the average number of views per video.
-These metrics update dynamically when the user changes the filters.
-
-
-📥 Download Filtered Data
-The dashboard includes a Download CSV button.
-Users can download the processed dataset directly from the dashboard.
-This makes it easier to save and use the analyzed data for further work.
-
-🧹 Data Cleaning and Preparation
-Before creating the dashboard, the dataset was explored and prepared for analysis.
-The data preparation process included:
-
-- Checking the dataset structure.
-- Checking the number of rows and columns.
-- Checking missing values.
-- Checking duplicate records.
-- Removing duplicate records where required.
-- Converting publish_time into datetime format.
-- Extracting the publishing day.
-- Extracting the publishing hour.
-- Ordering the days from Monday to Sunday.
-- Working with category IDs and category information.
-
-* Additional analytical columns were created for better analysis:
-
-- engagement_rate
-- like_rate
-- publish_day
-- publish_hour
+Users can download the processed data displayed by the dashboard for further analysis.
+---
 
 
-▶️ How to Run the Project
-Step 1 — Install Python
+# ▶️ How to Run the Project
+
+## Step 1 — Install Python
+
 Make sure Python is installed on your computer.
 
-Step 2 — Install Required Libraries
-Open the terminal in the project folder and run:
+## Step 2 — Install Required Libraries
+
+Open a terminal inside the project folder and run:
+
+```bash
 pip install -r requirements.txt
+```
 
-Step 3 — Keep the Dataset in the Project Folder
-Make sure the following files are available:
+## Step 3 — Keep Required Files Together
+Make sure these files are available in the project folder:
 
+```text
 stream.py
 CAvideos.csv
 CA_category_id.json
-The CAvideos.csv file should be in the same folder as stream.py.
+```
+The `CAvideos.csv` file should be in the same folder as `stream.py`.
 
-Step 4 — Run the Streamlit Dashboard
-Run:streamlit run stream.py
+## Step 4 — Run the Streamlit Dashboard
+
+Run:
+
+```bash
+streamlit run stream.py
+```
 The Streamlit dashboard will open in your web browser.
 
-📚 What I Learned
-While working on this project, I learned how to:
+## Step 5 — Run the Jupyter Notebook
 
-- Work with a real-world dataset.
-- Use Pandas for data cleaning and analysis.
-- Handle missing and duplicate data.
-- Convert and work with datetime data.
-- Create new analytical features.
-- Calculate engagement and like rates.
-- Use Matplotlib and Seaborn for visualization.
-- Create a Word Cloud from text data.
-- Build interactive dashboards using Streamlit.
-- Add filters to a dashboard.
-- Display metrics and interactive tables.
-- Work with JSON category data.
-- Create a requirements file for a Python project.
-- Write project documentation using README.
-- Organize a data analysis project.
+Open:
 
-🎯 Project Goal
-The main goal of this project is to turn raw YouTube trending video data into meaningful information through data analysis and interactive visualization.
-The Streamlit dashboard makes it possible to explore video performance and discover patterns in categories, engagement, likes, views, tags, and upload times in an easy and interactive way.
+```text
+yt_analysis.ipynb
+```
 
-🚀 Future Improvements
-Some possible improvements for the project include:
+in Jupyter Notebook or VS Code and run the cells to reproduce the Data Science analysis.
+---
 
-- Adding more advanced filters.
-- Adding more category-based comparisons.
-- Adding monthly and yearly trend analysis.
-- Adding additional interactive visualizations.
-- Connecting the project to live YouTube data using the YouTube API.
-- Deploying the Streamlit dashboard online.
+# 📚 What I Learned
+Through this project, I learned how to:
 
-👩‍💻 Author
-Suman
-YouTube Trending Video Analysis Built with Python, Pandas, Matplotlib, Seaborn, WordCloud, and Streamlit.
+* Work with a real-world dataset.
+* Use Pandas for data cleaning and analysis.
+* Handle missing and duplicate data.
+* Work with datetime data.
+* Create analytical features.
+* Calculate engagement and like rates.
+* Perform exploratory data analysis.
+* Analyze correlations between variables.
+* Perform time-series analysis.
+* Analyze category performance.
+* Analyze upload-time patterns.
+* Create visualizations using Matplotlib and Seaborn.
+* Create a Word Cloud from text data.
+* Work with JSON data.
+* Build interactive dashboards using Streamlit.
+* Add filters and metrics to a dashboard.
+* Provide downloadable data from a dashboard.
+* Organize and document a Data Science project.
+---
+
+# 🎯 Project Goal
+
+The main goal of this project is to transform raw YouTube trending video data into meaningful information through **data cleaning, analysis, visualization, and interactive exploration**.
+
+The combination of the Jupyter Notebook and Streamlit dashboard demonstrates the complete flow from raw data to an interactive Data Science application.
+---
+
+# 🚀 Future Improvements
+Possible future improvements include:
+
+* Adding more interactive filters.
+* Adding additional category comparisons.
+* Adding more advanced visualizations.
+* Connecting the dashboard to live YouTube data using the YouTube API.
+* Deploying the Streamlit dashboard online.
+---
+
+# 👩‍💻 Author
+
+**Suman**
+
+**YouTube Trending Video Analysis**
+Built with Python, Pandas, Matplotlib, Seaborn, WordCloud, Streamlit, and Jupyter Notebook.
 
 ⭐ Thank you for checking out this project!
